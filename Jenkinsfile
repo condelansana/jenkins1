@@ -1,7 +1,7 @@
 pipeline{
     agent any
     triggers {
-            cron("*****")
+            cron('* * * * *')
     }
     parameters{
         string(name: 'NAME', defaultValue: 'M. Jenkins', description: 'Qui est ce ?')
