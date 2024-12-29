@@ -1,10 +1,10 @@
 pipeline{
     agent any
 
-    environment (
+    environment {
         MY_VAR = 'une variable'
         MY_NUBLER = 123
-    )
+    }
 
     stages{
         stage('build'){
