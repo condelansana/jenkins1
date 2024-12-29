@@ -1,7 +1,7 @@
 pipeline{
     agent any
     triggers {
-            cron('* * * * *')
+            pollSCM('* * * * *')
     }
     parameters{
         string(name: 'NAME', defaultValue: 'M. Jenkins', description: 'Qui est ce ?')
