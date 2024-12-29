@@ -1,6 +1,8 @@
 pipeline{
     agent any
-
+    triggers {
+            cron(*****)
+    }
     parameters{
         string(name: 'NAME', defaultValue: 'M. Jenkins', description: 'Qui est ce ?')
         text(name: 'TEXT', defaultValue: 'un texte', description: 'une description')
@@ -9,6 +11,7 @@ pipeline{
         password(name: 'PASSWORD', description: 'un mot de passe')
 
     }
+  
     stages{
         stage('build'){
             options{
