@@ -6,13 +6,13 @@ pipeline{
             steps{
                 echo 'Build application ....'
             }
-
         }
-         stage('tests'){
+        stage('tests'){
             steps{
                 echo 'Execution tests ...'
             }
-        } stage('deployment'){
+        } 
+        stage('deployment'){
             steps{
                  echo 'Deplyment application ...'
             }
