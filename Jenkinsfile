@@ -1,8 +1,7 @@
 pipeline{
-    agent {
-        docker {
-            image 'node:21-alpine'
-        }
+    agent any
+    options {
+        timeout (time: 1, unit: "HOURS")
     }
 
     stages{
