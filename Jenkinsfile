@@ -24,6 +24,7 @@ pipeline{
                 echo "CHOICE: ${ CHOICE}"
                 echo "PASSWORD: ${ PASSWORD}"
                 sh 'npm -v'
+                echo 'Hello world'
             }
         }
     }
