@@ -11,6 +11,13 @@ pipeline{
                 sh 'npm -v'
             }
         }
-        
+    }
+    post{
+        always {
+            echo 'always ...'
+        }
+        success {
+            echo 'success !'
+        }
     }
 }
