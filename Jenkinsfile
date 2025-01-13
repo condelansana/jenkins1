@@ -4,7 +4,7 @@ pipeline{
     parameters {
         booleanParam(name: 'DEPLOY_TO', defaultValue: false, description: 'production ?')
     }
- 
+    
     stages{
         stage('build'){
             steps{
@@ -16,7 +16,7 @@ pipeline{
            when{
             allOf {
                 branch 'master'
-                equals expected: true, actual: params.DEPLOY_TO
+                expression { params.DEPLOY_TO }
             }
            }
             steps{
