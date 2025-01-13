@@ -14,22 +14,22 @@ pipeline{
                         values 'firefox', 'chrome', 'safari'
                     }
                 }
-                
+                stages {
+                    stage('build'){
+                        steps {
+                            echo "construire pour ${ PLATFORM } - ${ BROWSER }"
+                        }
+
+                    }
+                    stage('test'){
+                        steps {
+                            echo "test pour ${ PLATFORM } - ${ BROWSER }"
+                        }
+                    }
+                }  
            }
         }
-        stages {
-            stage('build'){
-                steps {
-                    echo "construire pour ${ PLATFORM } - ${ BROWSER }"
-                }
-
-            }
-            stage('test'){
-                steps {
-                    echo "test pour ${ PLATFORM } - ${ BROWSER }"
-                }
-            }
-        }
+        
         
         stage('deployment production'){
             steps{
